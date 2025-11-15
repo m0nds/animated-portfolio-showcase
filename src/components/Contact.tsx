@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, FileText } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, label: 'GitHub', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-  { icon: Twitter, label: 'Twitter', href: '#' },
-  { icon: Mail, label: 'Email', href: 'mailto:hello@example.com' }
+  { icon: Github, label: 'GITHUB', href: 'https://github.com' },
+  { icon: Linkedin, label: 'LINKEDIN', href: 'https://linkedin.com' },
+  { icon: Twitter, label: 'TWITTER', href: 'https://twitter.com' },
+  { icon: Mail, label: 'EMAIL', href: 'mailto:hello@example.com' }
 ];
 
 const Contact = () => {
@@ -15,55 +15,84 @@ const Contact = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="min-h-screen flex items-center py-20">
+    <section id="contact" className="min-h-screen flex items-center py-20 border-t border-border/20">
       <div className="container mx-auto px-6">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-4xl mx-auto"
         >
-          <h2 className="text-5xl md:text-6xl font-bold mb-8 gradient-text">
-            Let's Work Together
+          <h2 className="text-3xl md:text-5xl font-bold mb-12 uppercase tracking-tight pixel-text">
+            LET'S CONNECT
           </h2>
 
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Have a project in mind or just want to chat? Feel free to reach out!
-          </p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-16"
+          >
+            <p className="text-base md:text-lg mb-8 leading-relaxed lowercase">
+              whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out. i'm always open to discussing new opportunities and interesting ideas.
+            </p>
 
-          <div className="glass-card p-8 rounded-2xl mb-12">
             <a 
               href="mailto:hello@example.com"
-              className="inline-block text-3xl md:text-4xl font-bold hover:text-primary transition-colors"
+              className="inline-block text-2xl md:text-4xl font-bold hover:text-accent transition-colors lowercase border-b-2 border-foreground hover:border-accent"
             >
               hello@example.com
             </a>
-          </div>
+          </motion.div>
 
-          <div className="flex justify-center gap-6 flex-wrap">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={social.label}
                 href={social.href}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="glass-card p-4 rounded-xl hover:scale-110 hover:border-primary transition-all group"
-                whileHover={{ y: -5 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                className="border border-border/30 hover:border-accent p-6 flex flex-col items-center gap-4 group transition-all duration-300 hover:bg-accent/5"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <social.icon className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
+                <social.icon className="w-6 h-6 group-hover:text-accent transition-colors" />
+                <span className="text-xs tracking-wider group-hover:text-accent transition-colors">
+                  {social.label}
+                </span>
               </motion.a>
             ))}
           </div>
 
+          <motion.div
+            id="resume"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="border border-border/30 p-8 hover:border-accent transition-all duration-300 group"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-2 uppercase tracking-tight group-hover:text-accent transition-colors">
+                  DOWNLOAD RESUME
+                </h3>
+                <p className="text-sm text-muted-foreground lowercase">
+                  view my full work history and credentials
+                </p>
+              </div>
+              <FileText className="w-8 h-8 text-muted-foreground group-hover:text-accent transition-colors" />
+            </div>
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-12 text-muted-foreground"
+            transition={{ duration: 0.8, delay: 1 }}
+            className="mt-16 text-xs text-muted-foreground text-center tracking-wider"
           >
-            © 2024 Frontend Developer. Built with React & Three.js
+            © 2024 PORTFOLIO. BUILT WITH REACT, THREE.JS & FRAMER MOTION
           </motion.p>
         </motion.div>
       </div>
