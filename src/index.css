@@ -8,52 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 25% 8%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 189 94% 55%;
-    --primary-foreground: 220 25% 8%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 280 60% 60%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 189 94% 55%;
-    --accent-foreground: 220 25% 8%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 189 94% 55%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 100%;
 
-    --radius: 0.75rem;
+    --radius: 0;
 
-    /* Custom portfolio colors */
-    --primary-glow: 189 94% 65%;
-    --secondary-glow: 280 60% 70%;
-    --glass-bg: 220 20% 12%;
-    --glass-border: 220 15% 25%;
+    /* Retro colors */
+    --retro-green: 142 76% 36%;
+    --retro-red: 0 84% 60%;
+    --retro-blue: 217 91% 60%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(189 94% 55% / 0.8), hsl(280 60% 60% / 0.6));
-    --gradient-mesh: radial-gradient(at 50% 0%, hsl(189 94% 55% / 0.15) 0px, transparent 50%),
-                     radial-gradient(at 80% 50%, hsl(280 60% 60% / 0.15) 0px, transparent 50%),
-                     radial-gradient(at 20% 80%, hsl(189 94% 55% / 0.1) 0px, transparent 50%);
-
-    /* Shadows & Effects */
-    --shadow-glow: 0 0 40px hsl(189 94% 55% / 0.3);
-    --shadow-card: 0 8px 32px hsl(220 25% 5% / 0.5);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Effects */
+    --glitch-shadow: 2px 2px 0 hsl(var(--retro-green)), -2px -2px 0 hsl(var(--retro-red));
   }
 }
 
@@ -64,7 +55,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
-    background: var(--gradient-mesh), hsl(var(--background));
+    font-family: 'Space Mono', 'Courier New', monospace;
   }
 
   html {
@@ -73,30 +64,95 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .glass-card {
-    background: hsl(var(--glass-bg) / 0.4);
-    backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--glass-border) / 0.5);
-    box-shadow: var(--shadow-card);
+  .pixel-text {
+    font-family: 'VT323', 'Courier New', monospace;
+    letter-spacing: 0.05em;
   }
 
-  .glow-text {
-    text-shadow: 0 0 20px hsl(var(--primary-glow) / 0.5);
+  .glitch {
+    position: relative;
+    animation: glitch 2s infinite;
   }
 
-  .gradient-text {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+  .glitch::before {
+    animation: glitch-1 0.3s infinite reverse;
+    color: hsl(var(--retro-green));
+    z-index: -1;
   }
 
-  .animate-glow {
-    animation: glow 3s ease-in-out infinite alternate;
+  .glitch::after {
+    animation: glitch-2 0.3s infinite reverse;
+    color: hsl(var(--retro-red));
+    z-index: -2;
+  }
+
+  .scrambled {
+    font-family: 'Courier New', monospace;
+    letter-spacing: -0.02em;
+    opacity: 0.7;
+  }
+
+  .rotate-text {
+    animation: rotate 20s linear infinite;
+  }
+
+  @keyframes glitch {
+    0%, 90%, 100% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(-2px, -2px);
+    }
+    60% {
+      transform: translate(2px, 2px);
+    }
+    80% {
+      transform: translate(2px, -2px);
+    }
+  }
+
+  @keyframes glitch-1 {
+    0% {
+      clip-path: inset(40% 0 61% 0);
+      transform: translate(-2px, 0);
+    }
+    100% {
+      clip-path: inset(30% 0 70% 0);
+      transform: translate(2px, 0);
+    }
+  }
+
+  @keyframes glitch-2 {
+    0% {
+      clip-path: inset(20% 0 75% 0);
+      transform: translate(2px, 0);
+    }
+    100% {
+      clip-path: inset(60% 0 20% 0);
+      transform: translate(-2px, 0);
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   @keyframes float {
@@ -104,31 +160,11 @@ All colors MUST be HSL.
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-10px);
     }
   }
 
-  @keyframes glow {
-    0% {
-      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
-    }
-    100% {
-      box-shadow: 0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--secondary) / 0.4);
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .animate-fadeInUp {
-    animation: fadeInUp 0.8s ease-out forwards;
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
   }
 }
