@@ -4,10 +4,10 @@ import { useRef } from 'react';
 import { Mail, Github, Linkedin, Twitter, FileText } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, label: 'GITHUB', href: 'https://github.com' },
-  { icon: Linkedin, label: 'LINKEDIN', href: 'https://linkedin.com' },
-  { icon: Twitter, label: 'TWITTER', href: 'https://twitter.com' },
-  { icon: Mail, label: 'EMAIL', href: 'mailto:hello@example.com' }
+  { icon: Github, label: 'GITHUB', href: 'https://github.com/m0nds' },
+  { icon: Linkedin, label: 'LINKEDIN', href: 'https://www.linkedin.com/in/raymond-elegbede-40a446195/' },
+  { icon: Twitter, label: 'TWITTER', href: 'https://twitter.com/m0nds_' },
+  { icon: Mail, label: 'EMAIL', href: 'mailto:elegbede.raymond@gmail.com' }
 ];
 
 const Contact = () => {
@@ -39,10 +39,10 @@ const Contact = () => {
             </p>
 
             <a 
-              href="mailto:hello@example.com"
+              href="mailto:elegbede.raymond@gmail.com"
               className="inline-block text-2xl md:text-4xl font-bold hover:text-accent transition-colors lowercase border-b-2 border-foreground hover:border-accent"
             >
-              hello@example.com
+              elegbede.raymond@gmail.com
             </a>
           </motion.div>
 
@@ -92,7 +92,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="mt-16 text-xs text-muted-foreground text-center tracking-wider"
           >
-            © 2024 PORTFOLIO. BUILT WITH REACT, THREE.JS & FRAMER MOTION
+            © {new Date().getFullYear()} All rights... shh, all love from Raymond
           </motion.p>
         </motion.div>
       </div>

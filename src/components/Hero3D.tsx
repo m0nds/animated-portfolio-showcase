@@ -16,7 +16,7 @@ const Hero3D = () => {
   const [scrambled, setScrambled] = useState('');
 
   useEffect(() => {
-    const text = "CREATIVE CODE INTERACTIVE DESIGN";
+    const text = "CREATIVE, PROBLEM SOLVER, TECH SAVVY.";
     const interval = setInterval(() => {
       setScrambled(scrambleText(text));
     }, 150);
@@ -55,21 +55,21 @@ const Hero3D = () => {
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                PASSIONATE ABOUT
+                PROBLEM SOLVER,
               </motion.div>
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                INTERACTIVE
+                CREATIVE.
               </motion.div>
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
               >
-                EXPERIENCES.
+              SOFTWARE ENGINEER.
               </motion.div>
             </h1>
 
@@ -90,7 +90,7 @@ const Hero3D = () => {
               transition={{ duration: 0.6, delay: 1.4 }}
               className="text-sm md:text-base max-w-2xl mb-12 leading-relaxed lowercase tracking-wide"
             >
-              i like to think i'm a pretty interesting developer. so, get ready to learn about my work cos i'm assuming that's why you're here. scroll please ↓
+              frontend developer with 4+ years building scalable web applications and enterprise saas platforms. specialized in react, typescript, and complex state management.
             </motion.p>
           </motion.div>
         </div>

@@ -1,32 +1,36 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 const projects = [
   {
-    title: "NEURAL NETWORK VISUALIZER",
-    description: "Interactive 3D visualization of neural networks with real-time training data. Built with Three.js and WebGL shaders.",
-    tech: ["Three.js", "React", "WebGL", "TypeScript"],
-    year: "2024"
+    title: "MISSIONSYNC",
+    description: "enterprise strategic planning saas platform with 190+ react components, 97+ pages, and real-time data synchronization. architected hybrid state management combining redux and react query.",
+    tech: ["React", "TypeScript", "Redux Toolkit", "React Query"],
+    year: "2024",
+    url: "https://mission-sync.com"
   },
   {
-    title: "CRYPTO TRADING DASHBOARD",
-    description: "Real-time cryptocurrency trading platform with advanced charting and portfolio management features.",
-    tech: ["Next.js", "WebSocket", "D3.js", "Node.js"],
-    year: "2024"
+    title: "BEEVA AI",
+    description: "ai-powered platform for skin analysis and care assessment. architected and developed frontend applications using react and typescript.",
+    tech: ["React", "TypeScript", "AI Integration"],
+    year: "2024",
+    url: "https://beeva.ai"
   },
   {
-    title: "GENERATIVE ART STUDIO",
-    description: "Web-based tool for creating and exporting generative art using various algorithms and user controls.",
-    tech: ["Canvas API", "React", "GLSL", "P5.js"],
-    year: "2023"
+    title: "BLUELIGHT STUDIOS",
+    description: "solving user problems through software and technologies. developed and delivered multiple production web applications tailored to client specifications.",
+    tech: ["React", "GSAP", "Framer Motion"],
+    year: "2023",
+    url: "https://bluelight.studio"
   },
   {
-    title: "E-COMMERCE PLATFORM",
-    description: "Full-featured online marketplace with cart, checkout, and admin dashboard. Stripe integration for payments.",
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    year: "2023"
+    title: "FOLAWEJ LAUNDROMAT",
+    description: "world-class laundry experience with self-service facilities, coin-operated machines, and mobile app integration. maintained frontend codebase with continuous feature integration.",
+    tech: ["React", "Mobile Integration"],
+    year: "2023",
+    url: "https://folawej.com"
   }
 ];
 
@@ -81,16 +85,19 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="flex gap-6 text-sm">
-                    <button className="flex items-center gap-2 hover:text-accent transition-colors group/btn">
-                      <Github className="w-4 h-4" />
-                      <span className="uppercase text-xs tracking-wider">Code</span>
-                    </button>
-                    <button className="flex items-center gap-2 hover:text-accent transition-colors group/btn">
-                      <ExternalLink className="w-4 h-4" />
-                      <span className="uppercase text-xs tracking-wider">Live</span>
-                    </button>
-                  </div>
+                  {project.url && (
+                    <div className="flex gap-6 text-sm">
+                      <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 hover:text-accent transition-colors group/btn"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        <span className="uppercase text-xs tracking-wider">View</span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}

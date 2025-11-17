@@ -33,7 +33,8 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <a href="#home" className="text-xl font-bold tracking-tight">
-            PORTFOLIO.
+            {/* M{'</>'}NDS. */}
+            M0NDS.
           </a>
 
           {/* Desktop Menu */}

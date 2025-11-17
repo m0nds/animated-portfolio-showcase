@@ -51,15 +51,21 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    cursor: none !important;
   }
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
     font-family: 'Space Mono', 'Courier New', monospace;
+    cursor: none;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  a, button, input, textarea, select {
+    cursor: none !important;
   }
 }
 

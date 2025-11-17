@@ -58,14 +58,14 @@ const About = () => {
             className="space-y-8"
           >
             <p className="text-base md:text-lg leading-relaxed lowercase">
-              Each frontend development endeavor offers a unique opportunity to express creativity and acquire new skills. Throughout the last three years, I've successfully brought imaginative concepts to life, delivering exceptional website projects across different sectors, meeting user demands, and aligning with business objectives.
+              Building scalable, performant web applications and enterprise saas platforms. architected large-scale applications with 190+ components, optimized performance, and implemented real-time data synchronization. delivered 30% increase in engineering velocity through reusable component structures and optimized workflows.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 pt-8">
               <div className="space-y-4">
                 <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">Technologies</h3>
                 <div className="space-y-2">
-                  {['React / Next.js', 'TypeScript', 'Three.js / WebGL', 'Tailwind CSS', 'Framer Motion', 'Node.js'].map((tech, index) => (
+                  {['React / Next.js', 'TypeScript / JavaScript', 'Vue.js', 'React Native', 'Tailwind CSS', 'Node.js', 'GSAP', 'Git', 'GraphQL', 'Testing Libraries'].map((tech, index) => (
                     <motion.div
                       key={tech}
                       initial={{ opacity: 0, x: -20 }}
@@ -83,7 +83,7 @@ const About = () => {
               <div className="space-y-4">
                 <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">Expertise</h3>
                 <div className="space-y-2">
-                  {['UI/UX Development', '3D Web Experiences', 'Performance Optimization', 'Responsive Design', 'Animation & Interaction', 'API Integration'].map((skill, index) => (
+                  {['State Management', 'Component Architecture', 'Performance Optimization', 'API Integration', 'Real-time Systems', 'Enterprise SaaS', 'Mobile Development', 'Testing & QA', 'CI/CD Pipelines', 'Code Optimization'].map((skill, index) => (
                     <motion.div
                       key={skill}
                       initial={{ opacity: 0, x: -20 }}
