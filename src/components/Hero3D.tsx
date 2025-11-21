@@ -88,9 +88,9 @@ const Hero3D = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}
-              className="text-sm md:text-base max-w-2xl mb-12 leading-relaxed lowercase tracking-wide"
+              className="text-sm md:text-base max-w-2xl mb-12 leading-relaxed tracking-wide"
             >
-              frontend developer with 4+ years building scalable web applications and enterprise saas platforms. specialized in react, typescript, and complex state management.
+              Frontend developer with 4+ years building scalable web applications and enterprise saas platforms. specialized in react, typescript, and complex state management.
             </motion.p>
           </motion.div>
         </div>
