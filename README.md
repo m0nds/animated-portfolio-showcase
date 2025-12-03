@@ -1,73 +1,194 @@
-# Welcome to your Lovable project
+# Monds. | Portfolio
 
-## Project info
+A modern, animated portfolio website showcasing my work as a Software Engineer. Built with React, TypeScript, and Three.js, featuring smooth animations, 3D elements, and an interactive user experience.
 
-**URL**: https://lovable.dev/projects/d1e96638-6594-4369-a3d9-39c1e74132ac
+![Portfolio Preview](https://img.shields.io/badge/Status-Live-success) ![React](https://img.shields.io/badge/React-18.3.1-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue) ![Vite](https://img.shields.io/badge/Vite-5.4.19-purple)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **3D Hero Section** - Interactive 3D scene built with Three.js and React Three Fiber
+- **Animated Sections** - Smooth scroll-triggered animations using Framer Motion
+- **Custom Cursor** - Unique cursor experience that follows user interaction
+- **Spotify Integration** - Live Spotify widget displaying currently playing track
+- **Project Showcase** - Organized display of professional projects and personal projects with tabs
+- **Responsive Design** - Fully responsive layout optimized for all devices
+- **Modern UI** - Built with shadcn/ui components and Tailwind CSS
+- **Smooth Navigation** - Smooth scrolling navigation with active section highlighting
+- **Resume Download** - Direct download functionality for resume PDF
 
-**Use Lovable**
+## 🚀 Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d1e96638-6594-4369-a3d9-39c1e74132ac) and start prompting.
+### Core
+- **React 18.3.1** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
 
-Changes made via Lovable will be committed automatically to this repo.
+### 3D & Graphics
+- **Three.js** - 3D graphics library
+- **@react-three/fiber** - React renderer for Three.js
+- **@react-three/drei** - Useful helpers for React Three Fiber
 
-**Use your preferred IDE**
+### Styling & UI
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality React components
+- **Framer Motion** - Animation library
+- **GSAP** - Advanced animation library
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Additional Libraries
+- **React Router** - Client-side routing
+- **TanStack Query** - Data fetching and caching
+- **Spotify Web API** - Spotify integration
+- **Lucide React** - Icon library
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Installation
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Setup
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd animated-portfolio-showcase
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   ```
+   http://localhost:8080
+   ```
+
+## 🛠️ Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+
+## 📁 Project Structure
+
+```
+animated-portfolio-showcase/
+├── public/
+│   ├── monds.png          # Portfolio image/icon
+│   ├── favicon.ico        # Favicon
+│   └── robots.txt         # SEO robots file
+├── src/
+│   ├── assets/            # Static assets (resume, music, etc.)
+│   ├── components/        # React components
+│   │   ├── About.tsx      # About section
+│   │   ├── Contact.tsx    # Contact section
+│   │   ├── CustomCursor.tsx # Custom cursor component
+│   │   ├── Hero3D.tsx     # 3D hero section
+│   │   ├── Navigation.tsx # Navigation bar
+│   │   ├── Projects.tsx   # Projects showcase
+│   │   ├── SpotifyWidget.tsx # Spotify integration
+│   │   └── ui/            # shadcn/ui components
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utility functions
+│   ├── pages/             # Page components
+│   ├── App.tsx            # Main app component
+│   ├── main.tsx           # Entry point
+│   └── index.css          # Global styles
+├── index.html             # HTML template
+├── package.json           # Dependencies
+├── tailwind.config.ts     # Tailwind configuration
+├── tsconfig.json          # TypeScript configuration
+└── vite.config.ts         # Vite configuration
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Key Components
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Hero3D
+Interactive 3D hero section featuring Three.js animations and particle effects.
 
-**Use GitHub Codespaces**
+### Projects
+Tabbed interface displaying:
+- **Projects** - Professional work and contributions
+- **Personal Projects** - Personal side projects with live and GitHub links
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### About
+Personal introduction and expertise showcase with animated text effects.
 
-## What technologies are used for this project?
+### Contact
+Contact information, social links, and resume download functionality.
 
-This project is built with:
+### SpotifyWidget
+Real-time Spotify integration showing currently playing track (requires Spotify API setup).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🔧 Configuration
 
-## How can I deploy this project?
+### Spotify Integration (Optional)
 
-Simply open [Lovable](https://lovable.dev/projects/d1e96638-6594-4369-a3d9-39c1e74132ac) and click on Share -> Publish.
+To enable Spotify widget, you'll need to:
+1. Create a Spotify app at [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
+2. Configure environment variables (if needed)
+3. Update the SpotifyWidget component with your credentials
 
-## Can I connect a custom domain to my Lovable project?
+### Customization
 
-Yes, you can!
+- **Colors & Theme**: Edit `tailwind.config.ts` for theme customization
+- **Content**: Update component files in `src/components/` to modify content
+- **Projects**: Edit project data in `Projects.tsx`
+- **Resume**: Replace `src/assets/RAY RESUME.pdf` with your resume
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🚢 Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Build for Production
+
+```bash
+npm run build
+```
+
+The `dist/` folder will contain the production-ready files.
+
+### Deploy to Vercel/Netlify
+
+1. Push your code to GitHub
+2. Import the repository to Vercel/Netlify
+3. Configure build settings:
+   - Build command: `npm run build`
+   - Output directory: `dist`
+4. Deploy!
+
+### Environment Variables
+
+No environment variables are required for basic functionality. Add them if you need Spotify integration or other API services.
+
+## 📝 License
+
+This project is private and personal. All rights reserved.
+
+## 👤 Author
+
+**Raymond Elegbede**
+
+- Portfolio: [monds-portfolio.netlify.app](https://monds-portfolio.netlify.app)
+- GitHub: [@m0nds](https://github.com/m0nds)
+- LinkedIn: [raymond-elegbede](https://www.linkedin.com/in/raymond-elegbede-40a446195/)
+- Twitter: [@m0nds_](https://twitter.com/m0nds_)
+- Email: elegbede.raymond@gmail.com
+
+## 🙏 Acknowledgments
+
+- [shadcn/ui](https://ui.shadcn.com/) for the amazing component library
+- [Three.js](https://threejs.org/) for 3D graphics capabilities
+- [Framer Motion](https://www.framer.com/motion/) for smooth animations
+- [Vite](https://vitejs.dev/) for the excellent development experience
+
+---
+
+⭐ If you like this portfolio, feel free to star the repository!
