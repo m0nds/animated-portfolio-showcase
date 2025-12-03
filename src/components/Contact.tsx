@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Mail, Github, Linkedin, Twitter, FileText } from 'lucide-react';
+import resume from '../assets/RAY RESUME.pdf'
 
 const socialLinks = [
   { icon: Github, label: 'GITHUB', href: 'https://github.com/m0nds' },
@@ -13,6 +14,25 @@ const socialLinks = [
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const handleResumeDownload = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(resume);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'RAY_RESUME.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      // Fallback: open in new tab if download fails
+      window.open(resume, '_blank');
+    }
+  };
 
   return (
     <section id="contact" className="min-h-screen flex items-center py-20 border-t border-border/20">
@@ -34,8 +54,8 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-16"
           >
-            <p className="text-base md:text-lg mb-8 leading-relaxed lowercase">
-              whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out. i'm always open to discussing new opportunities and interesting ideas.
+            <p className="text-base md:text-lg mb-8 leading-relaxed">
+              Whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out. i'm always open to discussing new opportunities and interesting ideas.
             </p>
 
             <a 
@@ -74,14 +94,18 @@ const Contact = () => {
             className="border border-border/30 p-8 hover:border-accent transition-all duration-300 group"
           >
             <div className="flex items-center justify-between">
-              <div>
+              <a 
+                href={resume} 
+                onClick={handleResumeDownload}
+                className="cursor-pointer"
+              >
                 <h3 className="text-xl font-bold mb-2 uppercase tracking-tight group-hover:text-accent transition-colors">
                   DOWNLOAD RESUME
                 </h3>
                 <p className="text-sm text-muted-foreground lowercase">
                   view my full work history and credentials
                 </p>
-              </div>
+              </a>
               <FileText className="w-8 h-8 text-muted-foreground group-hover:text-accent transition-colors" />
             </div>
           </motion.div>

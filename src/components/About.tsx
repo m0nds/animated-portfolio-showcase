@@ -57,8 +57,8 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
-            <p className="text-base md:text-lg leading-relaxed lowercase">
-              Building scalable, performant web applications and enterprise saas platforms. architected large-scale applications with 190+ components, optimized performance, and implemented real-time data synchronization. delivered 30% increase in engineering velocity through reusable component structures and optimized workflows.
+            <p className="text-base md:text-lg leading-relaxed">
+              I transform complex ideas into elegant, performant digital experiences. I've built everything from enterprise SaaS platforms to AI-powered applications, e-commerce solutions, and mobile experiences. My approach? Build systems that scale, components that breathe, and interfaces that feel effortless. I obsess over the details—crafting reusable architectures, eliminating unnecessary complexity, and ensuring every interaction feels intentional. Great code isn't just functional; it's maintainable, scalable, and a joy to work with.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 pt-8">
