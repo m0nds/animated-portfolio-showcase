@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Mail, Github, Linkedin, Twitter, FileText } from 'lucide-react';
-import resume from '../assets/RAY RESUME.pdf'
+import resume from '../assets/RAY_UPDATED_RESUME.pdf'
 
 const socialLinks = [
   { icon: Github, label: 'GITHUB', href: 'https://github.com/m0nds' },
@@ -23,7 +23,7 @@ const Contact = () => {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'RAY_RESUME.pdf';
+      link.download = 'Raymond_Resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

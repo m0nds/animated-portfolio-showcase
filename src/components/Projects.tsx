@@ -22,6 +22,13 @@ type PersonalProject = {
 
 const projects: Project[] = [
   {
+    title: "AFRISTAKES",
+    contribution: "AfriStakes is a structured capital platform connecting African businesses with investors. I wrote the majority of the frontend codebase from the ground up, delivering a fully functional investment platform within a short contract window.",
+    tech: ["React", "TypeScript", "Pusherjs", "Tanstack router", "Tanstack Table", 'Realtime updates', 'Web sockets'],
+    year: "2026",
+    url: "https://afristakes.com"
+  },
+  {
     title: "MISSIONSYNC",
     contribution: "Strategic planning SaaS platform, I architected and developed the frontend with 190+ react components, 97+ pages, and real-time data synchronization. architected hybrid state management combining redux and react query.",
     tech: ["React", "TypeScript", "Redux Toolkit", "React Query"],
