@@ -71,7 +71,7 @@ const CustomCursor = () => {
         <>
           {/* Outer ring with border */}
           <motion.div
-            className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-blue-500/60 pointer-events-none z-[9999] mix-blend-difference"
+            className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-accent/70 pointer-events-none z-[9999] mix-blend-difference"
             initial={{ opacity: 0 }}
             animate={{
               x: mousePosition.x - 16,
@@ -89,7 +89,7 @@ const CustomCursor = () => {
           />
           {/* Inner dot */}
           <motion.div
-            className="fixed top-0 left-0 w-2 h-2 rounded-full bg-white pointer-events-none z-[9999]"
+            className="fixed top-0 left-0 w-2 h-2 rounded-full bg-foreground pointer-events-none z-[9999]"
             initial={{ opacity: 0 }}
             animate={{
               x: mousePosition.x - 4,
@@ -108,7 +108,7 @@ const CustomCursor = () => {
           {/* Hover glow effect */}
           {isHovering && (
             <motion.div
-              className="fixed top-0 left-0 w-20 h-20 rounded-full bg-blue-500/30 pointer-events-none z-[9998] blur-2xl"
+              className="fixed top-0 left-0 w-20 h-20 rounded-full bg-accent/25 pointer-events-none z-[9998] blur-2xl"
               initial={{ opacity: 0, scale: 0 }}
               animate={{
                 x: mousePosition.x - 40,

@@ -29,16 +29,23 @@ const projects: Project[] = [
     url: "https://afristakes.com"
   },
   {
-    title: "MISSIONSYNC",
-    contribution: "Strategic planning SaaS platform, I architected and developed the frontend with 190+ react components, 97+ pages, and real-time data synchronization. architected hybrid state management combining redux and react query.",
-    tech: ["React", "TypeScript", "Redux Toolkit", "React Query"],
-    year: "2024",
-    url: "https://mission-sync.com"
+    title: "BUILDPANDA",
+    contribution: "BuildPanda is an online construction project management platform designed to help small to medium-sized contractors and home builders streamline their project planning and client communication process.",
+    tech: ["React", "TypeScript", "Postgres", "React Query", "Web sockets", "Redis", "Node JS", "Fastify", "Docker"],
+    year: "2026",
+    url: "https://buildpanda.io"
+  },
+  {
+    title: "FOLAWEJ",
+    contribution: "FolaweAj is a platform that provides world-class laundry experience with self-service facilities, coin-operated machines, and mobile app integration.",
+    tech: ["React", "TypeScript", "Redux Toolkit", "Ionic", "Web sockets"],
+    year: "2022",
+    url: "https://folawej.com"
   },
   {
     title: "BEEVA AI",
     contribution: "AI-powered platform for skin analysis and care assessment, I designed and developed the frontend using React and TypeScript.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "AI Integration", ],
+    tech: ["React", "TypeScript", "Tailwind CSS", "AI Integration",],
     year: "2024",
     url: "https://beeva.ai"
   },
@@ -50,55 +57,70 @@ const projects: Project[] = [
     url: "https://bluelight.studio"
   },
 ];
+// World-class laundry experience with self-service facilities, coin-operated machines, and mobile app integration
 
 const personalProjects: PersonalProject[] = [
   {
-    title: "CARLAND RENTALS",
-    description: 'Car rentals landing page site with animations',
-    tags: ["React JS", "UI/UX", 'Tailwind CSS', 'Framer Motion', 'Next JS'],
-    url: "https://carland-rentals.netlify.app/", 
-    codeLink: "https://github.com/m0nds/car-rentals-app",
+    title: "MediCore Healthcare API",
+    description: "A comprehensive RESTful API for MediCore Healthcare, enabling seamless management of patients, doctors, appointments, and medical records with robust authentication and authorization.",
+    tags: ["Express", "TypeScript", "Prisma", "Postgres", "Swagger", "JWT", "Bcrypt", "Helmet", "Jest", "K6", "Docker", "Bruno", "Zod", "Drizzle", "Node JS", "Redis Pub/Sub", "Background job processing", "Socket.IO", "Pino", "BullMQ", "Node Cron",],
+    url: "",
+    codeLink: "https://github.com/m0nds/medicore-api",
+  },
+  {
+    title: "Job Application API",
+    description: "Job Application API",
+    tags: ["Express", "TypeScript", "Prisma", "Postgres", "JWT", "Bcrypt", "Docker", "Zod", "Prisma", "Node JS"],
+    url: "",
+    codeLink: "https://github.com/m0nds/job-application-api",
   },
   {
     title: "APPLE 15 PRO WEBSITE CLONE",
     description: `A clone of the Apple 15 Pro and 15 pro max website design. It was developed with Gsap and Three.Js`,
     tags: ["React JS", "UI/UX", "Three js", 'GSAP'],
-    url: "https://apple-15pro-clone.netlify.app/", 
+    url: "https://apple-15pro-clone.netlify.app/",
     codeLink: "https://github.com/m0nds/apple-15pro-site",
   },
   {
     title: "INVOICE APP",
     description: `A modern, responsive invoice management application built with React, Firebase, and real-time WebSocket integration. This application provides a complete solution for creating, managing, and tracking invoices with a beautiful, mobile-first design.`,
     tags: ["React JS", "Tailwind CSS", "Framer Motion", "Firebase", "WebSocket", "Auth"],
-    url: "https://invoice-app-three-gamma.vercel.app/", 
+    url: "https://invoice-app-three-gamma.vercel.app/",
     codeLink: "https://github.com/m0nds/invoice-app",
+  },
+  {
+    title: "CARLAND RENTALS",
+    description: 'Car rentals landing page site with animations',
+    tags: ["React JS", "UI/UX", 'Tailwind CSS', 'Framer Motion', 'Next JS'],
+    url: "https://carland-rentals.netlify.app/",
+    codeLink: "https://github.com/m0nds/car-rentals-app",
   },
   {
     title: "BIM VIEWER WEBSITE",
     description: `A modern, responsive BIM viewer website built with React, Tailwind CSS, Framer Motion, Three JS, and GSAP. This website provides a complete solution for viewing BIM models with a beautiful, mobile-first design.`,
     tags: ["Next JS", "TypeScript", "Tailwind CSS", "Framer Motion", "Three JS", "GSAP", "Supabase"],
-    url: "https://bim-viewer-wewb.onrender.com/", 
+    url: "https://bim-viewer-wewb.onrender.com/",
     codeLink: "",
   },
   {
     title: "TEAMFLOW APP",
     description: `A modern, real-time task management and collaboration platform built with Next.js, designed to help teams organize projects, track tasks, and collaborate seamlessly.`,
     tags: ["Next JS", "Tailwind CSS", "Shadcn UI", "Framer Motion", "Web sockets", "Prisma", "Supabase"],
-    url: "", 
+    url: "",
     codeLink: "https://github.com/m0nds/teamflow-pro",
   },
   {
     title: "MONDS QUIZ APP",
     description: `The Quiz App allows you to take quizzes on various topics such as sports, general knowledge, music, animals, history and celebrities`,
     tags: ["React JS", "CSS Modules", "JavaScript"],
-    url: "https://mondsquiz.netlify.app/", 
+    url: "https://mondsquiz.netlify.app/",
     codeLink: "https://github.com/m0nds/monds-quiz",
   },
   {
     title: "ROOMS CHAT APP",
     description: `This is my rooms chat app website built using React JS, Tailwind CSS, Framer Motion, WebSocket, Node JS, and Socket IO`,
     tags: ["React JS", "Tailwind CSS", "Framer Motion", "WebSocket", "Node JS", "Socket IO", "Express"],
-    url: "https://mondsroomschat.netlify.app", 
+    url: "https://mondsroomschat.netlify.app",
     codeLink: "https://github.com/m0nds/chat-app",
   },
 ];
@@ -111,7 +133,7 @@ const Projects = () => {
   const ProjectCard = ({ project, index, isPersonal = false }: { project: Project | PersonalProject; index: number; isPersonal?: boolean }) => {
     const projectData = project as Project;
     const personalData = project as PersonalProject;
-    
+
     return (
       <motion.div
         key={project.title}
@@ -149,9 +171,9 @@ const Projects = () => {
 
           <div className="flex gap-6 text-sm">
             {project.url && project.url.trim() !== "" && (
-              <a 
-                href={project.url} 
-                target="_blank" 
+              <a
+                href={project.url}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-accent transition-colors group/btn"
               >
@@ -160,9 +182,9 @@ const Projects = () => {
               </a>
             )}
             {isPersonal && personalData.codeLink && personalData.codeLink.trim() !== "" && (
-              <a 
-                href={personalData.codeLink} 
-                target="_blank" 
+              <a
+                href={personalData.codeLink}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-accent transition-colors group/btn"
               >
@@ -191,14 +213,14 @@ const Projects = () => {
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="mb-12 bg-transparent border border-border/30 p-1 h-auto">
-              <TabsTrigger 
-                value="projects" 
+              <TabsTrigger
+                value="projects"
                 className="data-[state=active]:bg-foreground data-[state=active]:text-background uppercase text-xs tracking-wider px-6 py-2"
               >
                 Projects
               </TabsTrigger>
-              <TabsTrigger 
-                value="personal" 
+              <TabsTrigger
+                value="personal"
                 className="data-[state=active]:bg-foreground data-[state=active]:text-background uppercase text-xs tracking-wider px-6 py-2"
               >
                 Personal Projects

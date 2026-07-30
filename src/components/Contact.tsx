@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Mail, Github, Linkedin, Twitter, FileText } from 'lucide-react';
-import resume from '../assets/RAY_UPDATED_RESUME.pdf'
+import resume from '../assets/RAYMOND_RESUME_2026.pdf'
 
 const socialLinks = [
   { icon: Github, label: 'GITHUB', href: 'https://github.com/m0nds' },
@@ -23,7 +23,7 @@ const Contact = () => {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'Raymond_Resume.pdf';
+      link.download = 'Raymond_Elegbede_Software_Engineer.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -58,7 +58,7 @@ const Contact = () => {
               Whether you have a project in mind, want to collaborate, or just want to say hi, feel free to reach out. i'm always open to discussing new opportunities and interesting ideas.
             </p>
 
-            <a 
+            <a
               href="mailto:elegbede.raymond@gmail.com"
               className="inline-block text-2xl md:text-4xl font-bold hover:text-accent transition-colors lowercase border-b-2 border-foreground hover:border-accent"
             >
@@ -94,8 +94,8 @@ const Contact = () => {
             className="border border-border/30 p-8 hover:border-accent transition-all duration-300 group"
           >
             <div className="flex items-center justify-between">
-              <a 
-                href={resume} 
+              <a
+                href={resume}
                 onClick={handleResumeDownload}
                 className="cursor-pointer"
               >

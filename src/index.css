@@ -7,41 +7,81 @@ All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+  :root, .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 142 76% 42%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 142 76% 42%;
+
+    --radius: 0;
+
+    /* Retro colors */
+    --retro-green: 142 76% 42%;
+    --retro-red: 0 84% 60%;
+    --retro-blue: 217 91% 60%;
+
+    /* Effects */
+    --glitch-shadow: 2px 2px 0 hsl(var(--retro-green)), -2px -2px 0 hsl(var(--retro-red));
+  }
+
+  .light {
+    --background: 0 0% 97%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 91%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 142 76% 36%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 0 0% 100%;
+    --border: 0 0% 82%;
+    --input: 0 0% 82%;
+    --ring: 142 76% 36%;
 
     --radius: 0;
 
     /* Retro colors */
     --retro-green: 142 76% 36%;
-    --retro-red: 0 84% 60%;
-    --retro-blue: 217 91% 60%;
+    --retro-red: 0 84% 50%;
+    --retro-blue: 217 85% 50%;
 
     /* Effects */
     --glitch-shadow: 2px 2px 0 hsl(var(--retro-green)), -2px -2px 0 hsl(var(--retro-red));
@@ -55,7 +95,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
+    @apply bg-background text-foreground overflow-x-hidden transition-colors duration-300;
     font-family: 'Space Mono', 'Courier New', monospace;
     cursor: none;
   }

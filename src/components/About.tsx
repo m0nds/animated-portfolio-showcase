@@ -58,14 +58,27 @@ const About = () => {
             className="space-y-8"
           >
             <p className="text-base md:text-lg leading-relaxed">
-              I transform complex ideas into elegant, performant digital experiences. I've built everything from enterprise SaaS platforms to AI-powered applications, e-commerce solutions, and mobile experiences. My approach? Build systems that scale, components that breathe, and interfaces that feel effortless. I obsess over the details—crafting reusable architectures, eliminating unnecessary complexity, and ensuring every interaction feels intentional. Great code isn't just functional; it's maintainable, scalable, and a joy to work with.
+              I build things that ship, scale, and don't embarrass you six months
+              later. Five years on the frontend — enterprise SaaS platforms,
+              investment dashboards, AI-powered products, real-time interfaces.
+              Now fullstack — production-grade REST APIs with authentication,
+              encryption, WebSockets, and background jobs that run quietly while
+              users sleep.
+              <br />
+              My approach? Own the full product slice. Architect the backend,
+              integrate it cleanly on the frontend, test both ends, and ship with
+              confidence. I obsess over the details — reusable component libraries
+              that cut delivery time by 30%, Redis caching that makes endpoints 53×
+              faster, security patterns that protect users even when things go wrong.
+              Great engineering isn't just functional. It's maintainable, honest,
+              and built to last.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 pt-8">
               <div className="space-y-4">
                 <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">Technologies</h3>
                 <div className="space-y-2">
-                  {['React / Next.js', 'TypeScript / JavaScript', 'Vue.js', 'React Native', 'Tailwind CSS', 'Node.js', 'GSAP', 'Git', 'GraphQL', 'Testing Libraries'].map((tech, index) => (
+                  {['React / Next.js', 'TypeScript / JavaScript', 'Node.js / Express', 'PostgreSQL / Prisma', 'Redis / Bull', 'React Native', 'Tailwind CSS / shadcn/ui', 'Socket.io', 'Docker', 'GSAP / Framer Motion', 'GraphQL', 'Git / GitHub Actions'].map((tech, index) => (
                     <motion.div
                       key={tech}
                       initial={{ opacity: 0, x: -20 }}
@@ -83,7 +96,7 @@ const About = () => {
               <div className="space-y-4">
                 <h3 className="text-xl font-bold mb-4 uppercase tracking-wide">Expertise</h3>
                 <div className="space-y-2">
-                  {['State Management', 'Component Architecture', 'Performance Optimization', 'API Integration', 'Real-time Systems', 'Enterprise SaaS', 'Mobile Development', 'Testing & QA', 'CI/CD Pipelines', 'Code Optimization'].map((skill, index) => (
+                  {['Frontend Architecture', 'Backend API Design', 'State Management', 'Authentication & Security', 'Real-time Systems', 'Performance Optimisation', 'Component Architecture', 'Field-level Encryption', 'Testing & QA', 'CI/CD Pipelines', 'Enterprise SaaS', 'Mobile Development'].map((skill, index) => (
                     <motion.div
                       key={skill}
                       initial={{ opacity: 0, x: -20 }}

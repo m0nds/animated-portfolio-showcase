@@ -48,28 +48,28 @@ const Hero3D = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-accent"
               >
-                FRONTEND DEVELOPER,
+                FULLSTACK ENGINEER,
               </motion.div>
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                PROBLEM SOLVER,
+                FRONTEND SPECIALIST,
               </motion.div>
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                CREATIVE.
+                SYSTEM DESIGNER.
               </motion.div>
               <motion.div
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
               >
-              SOFTWARE ENGINEER.
+                PROBLEM SOLVER.
               </motion.div>
             </h1>
 
@@ -90,7 +90,10 @@ const Hero3D = () => {
               transition={{ duration: 0.6, delay: 1.4 }}
               className="text-sm md:text-base max-w-2xl mb-12 leading-relaxed tracking-wide"
             >
-              Frontend developer with 4+ years building scalable web applications and enterprise saas platforms. specialized in react, typescript, and complex state management.
+              Frontend-heavy fullstack engineer with 5+ years building production
+              React applications and backend APIs across fintech, SaaS, healthcare,
+              and e-commerce. Specialized in React, TypeScript, Node.js, and
+              complex system design.
             </motion.p>
           </motion.div>
         </div>
